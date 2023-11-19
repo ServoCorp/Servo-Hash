@@ -1,0 +1,144 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic);
+
+
+/**
+ * Base Elements
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span,
+a,
+button {
+  font-family: 'Lato', 'Open Sans', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  background: #0d1213;
+}
+
+hr.rounded {
+  border-top: 5px solid #5ce546;
+  width: 45%;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+hr.rounded-end {
+  border-top: 1px solid #5ce546;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+
+
+
+a {
+  color: #016aba;
+  text-decoration: none;
+}
+
+button {
+  font-size: 100%;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/**
+ * Button
+ */
+ .divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
+
+.button {
+  padding: 10px 30px 10px;
+  text-decoration: none;
+  color: #fff;
+  background: #016aba00;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: #8aff80;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+.buttons {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.button:hover {
+  background: #0d1213;
+  border-color: #8bff8062;
+}
+
+.menu {
+  height: 4em;
+  background-color: #151d1e;
+}
+
+.menu #date {
+  color: #8aff80;
+}
+
+.body {
+  padding: 15px;
+}
+/**
+ * Similar to Jumbotron
+ */
+
+.jumbo {
+  padding: 80px;
+  background: #0d1213;
+}
+.jumbo .jumbo-main {
+  background-color: #151d1e;
+  border-radius: 20px;
+  width: 70%;
+  margin: 0 auto;
+  height: 225px;
+}
+
+.jumbo h2 {
+  font-size: 3.2em;
+  margin-top: -25px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.jumbo p,
+.jumbo address {
+  margin-bottom: 25px;
+  text-align: center;
+  color: #8aff80;
+}
+
+.jumbo img {
+  height: 200px;
+  position: relative;
+  top: -25px;
+  right: -20px;
+}
