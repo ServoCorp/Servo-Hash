@@ -92,18 +92,17 @@ p {
 .menu {
   height: 4em;
   background-color: #151d1e;
-  vertical-align: middle;
-  display: table-cell; /* yikes */
-  width: 8%;
 }
 
 .menu #date {
   color: #8aff80;
+  line-height: 4em;
 }
 
 .menu #time {
   color: #8aff80;
   float: right;
+  line-height: 4em;
 }
 
 .body {
