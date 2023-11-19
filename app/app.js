@@ -33,6 +33,6 @@ window.addEventListener('load', function getDate() {
   s = s < 10 ? '0' + s : s;
   var time = h + ':' + m + ':' + s + ' ' + ampm;
   document.getElementById('time').innerHTML = time;
-  setTimeout(printTime, 1000);
+  setTimeout(getDate, 1000);
 }
 )
