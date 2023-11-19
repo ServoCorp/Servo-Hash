@@ -19,6 +19,7 @@ window.addEventListener('load', function getDate() {
   var year = d.getFullYear();
   var date = month + '/' + day + '/' + year;
   document.getElementById('date').innerHTML = date;
+  this.setTimeout(getDate, 1000)
 })
 
 window.addEventListener('load', function getDate() {

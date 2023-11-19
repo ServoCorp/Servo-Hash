@@ -97,6 +97,7 @@ p {
 .menu #date {
   color: #8aff80;
   line-height: 4em;
+  float: left;
 }
 
 .menu #time {
@@ -140,4 +141,8 @@ p {
   position: relative;
   top: -25px;
   right: -20px;
+}
+
+.home:hover {
+  color: #8aff80 !important;
 }
