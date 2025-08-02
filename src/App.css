@@ -1,0 +1,8 @@
+/* App Component Styles */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Additional global styles can go here */
