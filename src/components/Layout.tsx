@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Hash, Shield } from 'lucide-react'
 import './Layout.css'
@@ -9,8 +10,26 @@ interface LayoutProps {
 
 function Layout({ children }: LayoutProps) {
   const location = useLocation()
-  const currentTime = new Date().toLocaleTimeString()
-  const currentDate = new Date().toLocaleDateString()
+  const [currentTime, setCurrentTime] = useState(new Date())
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date())
+    }, 1000) // Update every second
+
+    return () => clearInterval(timer) // Cleanup on unmount
+  }, [])
+
+  const formatTimeWithSeconds = (date: Date) => {
+    const hours = date.getHours().toString().padStart(2, '0')
+    const minutes = date.getMinutes().toString().padStart(2, '0')
+    const seconds = date.getSeconds().toString().padStart(2, '0')
+
+    return `${hours}:${minutes}:${seconds}`
+  }
+
+  const currentDate = currentTime.toLocaleDateString()
+  const timeString = formatTimeWithSeconds(currentTime)
 
   return (
     <div className="app">
@@ -18,7 +37,7 @@ function Layout({ children }: LayoutProps) {
         <div className="header-content">
           <div className="date-time">
             <span className="date">{currentDate}</span>
-            <span className="time">{currentTime}</span>
+            <span className="time">{timeString}</span>
           </div>
         </div>
       </header>
